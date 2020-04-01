@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136532430-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136532430-5');
+</script>
+
+  <title>Covid-19 - Ayuda en España</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" sizes="32x32" href="../img/32x32.png">
+  <link rel="icon" sizes="16x16" href="../img/16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple.png">
+  <link rel="stylesheet" href="../css/styless.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary font-weight-normal">
+    <div class="container">
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mx-auto mt-2 mt-lg-0 text-uppercase">
+          <li class="nav-item active">
+            <a class="nav-link px-0 px-sm-4" href="/">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 px-sm-4" href="/estadisticas">Estadísticas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 px-sm-4" href="/consejos">Consejos</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+    <!-- Estadisiticas -->
+  <div class="container text-center text-sm-left mt-4">
+    <h1 class="pb-2 display-4 text-center">Estadísticas Coronavirus en España</h1>       
+    <p>A continuación se muestran las estadísticas del COVID-19 en tiempo real en TODA ESPAÑA. 
+      <p>Si deseas ver información de alguna comunidad autónoma en concreto, por favor seleccionala a continuación:</p>
+    </p>
+    <select class="form-control" id="prov">
+      <option value='Andalucia'>Andalucia</option>
+      <option value='Aragon'>Aragon</option>
+      <option value='Asturias'>Asturias</option>
+      <option value='Baleares'>Baleares</option>
+      <option value='Canarias'>Canarias</option>
+      <option value='Cantabria'>Cantabria</option>
+      <option value='CastillaLaMancha'>Castilla la Mancha</option>
+      <option value='CastillayLeon'>Castilla y León</option>
+      <option value='Cataluna'>Cataluña</option>
+      <option value='Ceuta'>Ceuta</option>
+      <option value='ComunidadValenciana'>Comunidad Valenciana</option>
+      <option value='Extremadura'>Extremadura</option>
+      <option value='Galicia'>Galicia</option>
+      <option value='Madrid'>Madrid</option>
+      <option value='Melilla'>Melilla</option>
+      <option value='Murcia'>Murcia</option>
+      <option value='Navarra'>Navarra</option>
+      <option value='PaisVasco'>País Vasco</option>
+      <option value='LaRioja'>La Rioja</option>
+    </select>
+  </div>
+
+<div class="container text-center text-sm-left mt-4">
+  <canvas id="myChart" class="d-none"></canvas>    
+</div>
+<div class="container text-center text-sm-left mt-4" id="casosEsp">
+  <h2>Casos globales de España</h2>
+  <div class="row">
+    <div class="col-md-7">
+      <canvas id="esp"></canvas>
+    </div>
+    <div class="col-md-5">
+      <canvas id="esp3"></canvas>       
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="bd-footer text-white py-3 bg-primary text-center text-sm-left ">
+    <div class="container">
+      <p class="text-center">Desarrollado con <i class="fas fa-heart"></i> por
+        <a href="https://www.linkedin.com/in/carlos-ferreras/"><b>Carlos Ferreras</b></a> e
+        <a href="https://www.linkedin.com/in/stringiyan/"> <b>Iyán Arcega</b></a>.</p>
+    </div>
+  </footer>
+  
+  <!-- App JS -->
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/08f34be42d.js" crossorigin="anonymous"></script>
+  <script src="../js/ccaa.js"></script>
+</body>
+
+</html>

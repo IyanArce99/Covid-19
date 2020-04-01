@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136532430-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136532430-5');
+</script>
+
+  <title>Covid-19 - Ayuda en España</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" sizes="32x32" href="./img/32x32.png">
+  <link rel="icon" sizes="16x16" href="./img/16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple.png">
+  <link rel="stylesheet" href="./css/styless.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <script defer src="./js/app.js"></script>
+  <nav class="navbar navbar-expand-sm navbar-light bg-white font-weight-normal">
+    <div class="container">
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mx-auto mt-2 mt-lg-0 text-uppercase">
+          <li class="nav-item active">
+            <a class="nav-link px-0 px-sm-4" href="/">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 px-sm-4" href="/estadisticas">Estadísticas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 px-sm-4" href="/consejos">Consejos</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <!-- Banner -->
+  <div class="bd-pageheader text-center text-white bg-primary">
+    <div class="container">
+      <h1 class="h1">Covid-19</h1>
+      <p class="lead mx-auto">
+        La enfermadad del Coronavirus es una afección respiratoria que se propaga de persona a persona. Es importante
+        que todos colaboremos.
+      </p>
+      <p class="lead mx-auto"><a href="https://twitter.com/hashtag/quedateencasa?lang=es">#QuedateEnCasa</a></p>
+
+      <h3 class="h3 pt-4 row">
+
+        <div class="col-md py-1 py-md-0">
+        <span id="totalCases" class="Count">
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </span> afectados
+      </div>
+
+      <div class="col-md py-1 py-md-0">
+        <span id="totalHealed" class="Count">
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </span> recuperados
+      </div>
+
+      <div class="col-md py-1 py-md-0">
+        <span id="totalDeaths" class="Count">
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </span> fallecidos
+      </div>
+
+      </h3>
+
+    </div>
+  </div>
+
+  <!-- Contenedor de la Web -->
+  <div id="ayuda" class="container py-5">
+    <!-- Ayuda -->
+    <h2 class="display-4 text-center">¿Necesitas ayuda?</h2>
+    <p class="lead mb-3 text-center">
+      Es la hora de <b class="text-primary">colaborar</b>. Como sabemos, el covid-19 afecta principalmente a los mas
+      mayores y a personas con patologías. Muchas de ellas no tienen quien les hagan tareas tan simples como salir a
+      comprar, haciéndolo ellos mismos y poniendo en riesgo su <b class="text-primary">salud.</b>
+    </p>
+    <p class="lead mb-3">
+      Por eso mismo, utilizaremos la comunicación social para ayudar a estos grupos de personas.
+    </p>
+    <div class="row text-center py-3">
+      <div class="col-md-6 text-center">
+        <h3>¿TE AYUDAMOS?</h3>
+        <p class="px-lg-5">Desde hacerte la compra hasta pasearte al perro.</p>
+        <button type="button" class="btn btn-primary btn-lg my-2 my-sm-2" id="place" onclick="giveHelp()">
+          ¡Vamos allá! <i class="fa fa-angle-double-down"></i>
+        </button>
+        <div class="choose">
+          <p>Introduce la provincia en la que quieres solicitar ayuda.</p>
+          <select class="form-control" id="busqueda_provincia" required="required">
+            <option value='alava'>Álava</option>
+            <option value='albacete'>Albacete</option>
+            <option value='alicante'>Alicante/Alacant</option>
+            <option value='almeria'>Almería</option>
+            <option value='asturias'>Asturias</option>
+            <option value='avila'>Ávila</option>
+            <option value='badajoz'>Badajoz</option>
+            <option value='barcelona'>Barcelona</option>
+            <option value='burgos'>Burgos</option>
+            <option value='caceres'>Cáceres</option>
+            <option value='cadiz'>Cádiz</option>
+            <option value='cantabria'>Cantabria</option>
+            <option value='castellon'>Castellón/Castelló</option>
+            <option value='ceuta'>Ceuta</option>
+            <option value='ciudadreal'>Ciudad Real</option>
+            <option value='cordoba'>Córdoba</option>
+            <option value='cuenca'>Cuenca</option>
+            <option value='girona'>Girona</option>
+            <option value='laspalmas'>Las Palmas</option>
+            <option value='granada'>Granada</option>
+            <option value='guadalajara'>Guadalajara</option>
+            <option value='guipuzcoa'>Guipúzcoa</option>
+            <option value='huelva'>Huelva</option>
+            <option value='huesca'>Huesca</option>
+            <option value='illesbalears'>Illes Balears</option>
+            <option value='jaen'>Jaén</option>
+            <option value='acoruña'>A Coruña</option>
+            <option value='larioja'>La Rioja</option>
+            <option value='leon'>León</option>
+            <option value='lleida'>Lleida</option>
+            <option value='lugo'>Lugo</option>
+            <option value='madrid'>Madrid</option>
+            <option value='malaga'>Málaga</option>
+            <option value='melilla'>Melilla</option>
+            <option value='murcia'>Murcia</option>
+            <option value='navarra'>Navarra</option>
+            <option value='ourense'>Ourense</option>
+            <option value='palencia'>Palencia</option>
+            <option value='pontevedra'>Pontevedra</option>
+            <option value='salamanca'>Salamanca</option>
+            <option value='segovia'>Segovia</option>
+            <option value='sevilla'>Sevilla</option>
+            <option value='soria'>Soria</option>
+            <option value='tarragona'>Tarragona</option>
+            <option value='santacruztenerife'>Santa Cruz de Tenerife</option>
+            <option value='teruel'>Teruel</option>
+            <option value='toledo'>Toledo</option>
+            <option value='valencia'>Valencia/Valéncia</option>
+            <option value='valladolid'>Valladolid</option>
+            <option value='vizcaya'>Vizcaya</option>
+            <option value='zamora'>Zamora</option>
+            <option value='zaragoza'>Zaragoza</option>
+          </select>
+          <button type="button" class="btn btn-primary btn-lg my-2 my-sm-2" id="solicitarayuda">
+            <i class="fab fa-twitter mr-2"></i>¡Solicitar ayuda ahora!</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <h3>¿QUIERES AYUDAR?</h3>
+        <P class="px-lg-5">Presentate voluntario para ayudar a personas en riesgo.</P>
+        <button type="button" class="btn btn-primary btn-lg my-2 my-sm-2" id="place2" onclick="sendHelp()">
+          Se voluntario <i class="fa fa-angle-double-down"></i>
+        </button>
+        <div class="choose2">
+          <p>Introduce la provincia en la que quieres ayudar.</p>
+          <select class="form-control" id="busqueda_provincia2">
+            <option value='alava'>Álava</option>
+            <option value='albacete'>Albacete</option>
+            <option value='alicante'>Alicante/Alacant</option>
+            <option value='almeria'>Almería</option>
+            <option value='asturias'>Asturias</option>
+            <option value='avila'>Ávila</option>
+            <option value='badajoz'>Badajoz</option>
+            <option value='barcelona'>Barcelona</option>
+            <option value='burgos'>Burgos</option>
+            <option value='caceres'>Cáceres</option>
+            <option value='cadiz'>Cádiz</option>
+            <option value='cantabria'>Cantabria</option>
+            <option value='castellon'>Castellón/Castelló</option>
+            <option value='ceuta'>Ceuta</option>
+            <option value='ciudadreal'>Ciudad Real</option>
+            <option value='cordoba'>Córdoba</option>
+            <option value='cuenca'>Cuenca</option>
+            <option value='girona'>Girona</option>
+            <option value='laspalmas'>Las Palmas</option>
+            <option value='granada'>Granada</option>
+            <option value='guadalajara'>Guadalajara</option>
+            <option value='guipuzcoa'>Guipúzcoa</option>
+            <option value='huelva'>Huelva</option>
+            <option value='huesca'>Huesca</option>
+            <option value='illesbalears'>Illes Balears</option>
+            <option value='jaen'>Jaén</option>
+            <option value='acoruña'>A Coruña</option>
+            <option value='larioja'>La Rioja</option>
+            <option value='leon'>León</option>
+            <option value='lleida'>Lleida</option>
+            <option value='lugo'>Lugo</option>
+            <option value='madrid'>Madrid</option>
+            <option value='malaga'>Málaga</option>
+            <option value='melilla'>Melilla</option>
+            <option value='murcia'>Murcia</option>
+            <option value='navarra'>Navarra</option>
+            <option value='ourense'>Ourense</option>
+            <option value='palencia'>Palencia</option>
+            <option value='pontevedra'>Pontevedra</option>
+            <option value='salamanca'>Salamanca</option>
+            <option value='segovia'>Segovia</option>
+            <option value='sevilla'>Sevilla</option>
+            <option value='soria'>Soria</option>
+            <option value='tarragona'>Tarragona</option>
+            <option value='santacruztenerife'>Santa Cruz de Tenerife</option>
+            <option value='teruel'>Teruel</option>
+            <option value='toledo'>Toledo</option>
+            <option value='valencia'>Valencia/Valéncia</option>
+            <option value='valladolid'>Valladolid</option>
+            <option value='vizcaya'>Vizcaya</option>
+            <option value='zamora'>Zamora</option>
+            <option value='zaragoza'>Zaragoza</option>
+          </select>
+          <button type="button" class="btn btn-primary btn-lg my-2 my-sm-2" id="servolunt">
+            <i class="fab fa-twitter mr-2"></i>¡Ofrecete
+            como voluntario ahora!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bd-footer text-white py-3 bg-primary text-center text-sm-left">
+    <div class="container">
+      <p class="text-center">Desarrollado con <i class="fas fa-heart"></i> por
+        <a href="https://www.linkedin.com/in/carlos-ferreras/"><b>Carlos Ferreras</b></a> e
+        <a href="https://www.linkedin.com/in/stringiyan/"> <b>Iyán Arcega</b></a>.</p>
+    </div>
+  </footer>
+
+  <!-- App JS -->
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/08f34be42d.js" crossorigin="anonymous"></script>
+  <script defer src="/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+
+// Variables
+
+    $spacer: 2rem !default;
+    //Colores
+    $verde-1:       #14A384;
+    $verde-2:       #63DBBB;
+    $primary:         $verde-1;
+
+    //Texto
+    $font-family-base: 'Montserrat', sans-serif;
+
+    $enable-responsive-font-sizes:          true;
+
+    $font-size-base:              1rem;
+
+    $font-weight-light:           400 !default;
+    $font-weight-normal:          500 !default;
+
+    $headings-font-weight:        700;
+    $h1-font-size:                $font-size-base * 4;
+    $h2-font-size:                $font-size-base * 3;
+    $h3-font-size:                $font-size-base * 2;
+    $h4-font-size:                $font-size-base * 1.75;
+    $h5-font-size:                $font-size-base * 1.5;
+    $h6-font-size:                $font-size-base;
+    $lead-font-size:              $font-size-base * 1.5;
+
+// Links
+    $link-hover-decoration: none;
+    $link-color:                              #fff;
+    $link-decoration:                         none;
+    $link-hover-color:                        $link-color;
+    $link-hover-decoration:                   underline;
+
+
+    $nav-tabs-link-hover-border-color:  darken($link-color, 15%);;
+    $nav-tabs-link-active-color:        $verde-1;
+    $navbar-light-color:                $verde-1;
+    $navbar-padding-y: .72rem;
+    $navbar-light-active-color:         $verde-1;
+    $navbar-dark-active-color:         #fff;
+    $navbar-dark-color:                #fff;
+
+
+// Custom CSS
+    .bd-pageheader{
+        background: linear-gradient(rgba(20, 160, 133, 0.85), rgba(20, 160, 133, 0.85)), url(../img/hospital.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 4rem 0;
+    }
+    .bd-pageheader .lead {
+        max-width: 625px;
+    }
+
+    .bd-footer {
+        font-size: .875rem;
+        text-align: center;
+        background-color: $verde-1;
+    }
+    
+    .bd-footer-links {
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+    
+    
+    .bd-footer a {
+        font-weight: 600;
+        color: #f0f0f0 !important;
+    }
+    
+    .bd-footer a:hover {
+        color: $verde-2 !important;
+        text-decoration: underline;
+    }
+    
+    .bd-footer {
+        font-size: .875rem;
+        text-align: center !important;
+        text-align: left;
+        border-top: #ffc107 8px solid;
+        margin-top: 82px;
+    }
+    
+    .bd-footer-links li {
+        display: inline-block;
+    }
+    
+    .bd-footer-links li+li {
+        margin-left: 1rem;
+    }
+    
+    .bd-footer p {
+        margin-bottom: 0;
+    }
+    .choose, .choose2 {
+        display: none;
+        flex-direction: column;
+    }
+
+
+
+@import "../bootstrap-4.4.1/scss/bootstrap.scss";
+
+// Media Breakpoints
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(xs) {
+
+}
